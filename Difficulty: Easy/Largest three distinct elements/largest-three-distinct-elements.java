@@ -32,22 +32,21 @@ class Solution {
     public int[] getThreeLargest(int arr[]) {
         // code here
         Arrays.sort(arr);
-        int n=arr.length,j=0;
-        for(int i=1;i<n;i++){
+        int x=arr.length,j=0;
+        for(int i=1;i<x;i++){
             if(arr[i]!=arr[j]){
                 j++;
                 arr[j]=arr[i];
             }
         }
         int[] res=Arrays.copyOf(arr,j+1);
-        int x=res.length;
-        if( x==2) {
-            return new int[]{res[x-1],res[x-2]};
+        int l=res.length;
+        if(l==2){
+            return new int[]{res[l-1],res[l-2]};
         }
-        else if(x==1){
-            return new int[]{res[x-1]};
+        else if(l==1){
+            return new int[]{res[l-1]};
         }
-        return new int[]{res[x-1],res[x-2],res[x-3]};
-        
+        return new int[]{res[l-1],res[l-2],res[l-3]};
     }
 }
