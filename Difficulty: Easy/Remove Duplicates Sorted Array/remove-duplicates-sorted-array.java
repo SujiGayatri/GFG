@@ -29,10 +29,9 @@ class Solution {
     // Function to remove duplicates from the given array
     public int removeDuplicates(int[] arr) {
         // Code Here
-        int n=arr.length;
-        int i=0;
+        int n=arr.length,i=0;
         for(int j=1;j<n;j++){
-            if(arr[i]!=arr[j]){
+            if(arr[j]!=arr[i]){
                 i++;
                 arr[i]=arr[j];
             }
