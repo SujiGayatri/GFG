@@ -8,18 +8,18 @@ import java.util.*;
 class Solution {
     public boolean arraySortedOrNot(int[] arr) {
         // code here
-        int[] sorted=new int[arr.length];
-        for(int i=0;i<arr.length;i++){
-            sorted[i]=arr[i];
+        int n=arr.length,c=0;
+        int[] res=new int[n];
+        for(int i=0;i<n;i++){
+            res[i]=arr[i];
         }
         Arrays.sort(arr);
-        int c=0;
-        for(int i=0;i<arr.length;i++){
-            if(arr[i]==sorted[i]){
+        for(int i=0;i<n;i++){
+            if(arr[i]==res[i]){
                 c+=1;
             }
         }
-        return c==arr.length?true:false;
+        return c==n?true:false;
     }
 }
 
