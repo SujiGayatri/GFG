@@ -40,12 +40,12 @@ class Solution {
         // code here
         ArrayList<Integer> res=new ArrayList<>();
         int n=arr.length;
-        int maxRight = arr[n - 1];
-        res.add(maxRight);
-        for (int i = n - 2; i >= 0; i--) {
-            if (arr[i] >= maxRight) {
-                maxRight = arr[i];
-                res.add(maxRight);
+        int max=arr[n-1];
+        res.add(max);
+        for(int i=n-2;i>=0;i--){
+            if(arr[i]>=max){
+                max=arr[i];
+                res.add(max);
             }
         }
         Collections.reverse(res);
