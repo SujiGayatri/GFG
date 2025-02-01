@@ -11,14 +11,14 @@ class Solution {
         // Your code here
         Arrays.sort(arr);
         int c=0;
-        int l=0,r=arr.length-1;
-        while(l<r){
-            if(arr[l]+arr[r]<target){
-                c+=(r-l);
+        int l=0,n=arr.length-1;
+        while(l<n){
+            if(arr[l]+arr[n]<target){
+                c+=(n-l);
                 l++;
             }
             else{
-                r--;
+                n--;
             }
         }
         return c;
