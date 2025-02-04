@@ -38,14 +38,26 @@ class Geeks {
 class Solution {
     public List<Integer> findDuplicates(int[] arr) {
         // code here
+        // List<Integer> res=new ArrayList<>();
+        // int c=1;
+        // Arrays.sort(arr);
+        // for(int i=0;i<arr.length-1;i++){
+        //     int ind=Math.abs(arr[i])-1;
+        //     if(arr[ind]<0){
+        //         res.add(ind+1);
+        //     }
+        //     else{
+        //         arr[ind]=-arr[ind];
+        //     }
+        // }
+        // return res;
+        HashSet<Integer> set=new HashSet<>();
         List<Integer> res=new ArrayList<>();
-        Arrays.sort(arr);
-        for(int i=0;i<arr.length-1;i++){
-            if(arr[i]==arr[i+1]){
-                res.add(arr[i]);
-            }
-            while (i < arr.length - 1 && arr[i] == arr[i + 1]) {
-                i++;
+        for(int i:arr){
+            if(!set.contains(i)){
+                set.add(i);
+            }else{
+                res.add(i);
             }
         }
         return res;
