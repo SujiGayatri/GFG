@@ -17,7 +17,7 @@ class Driverclass {
             // calling ispar method of Paranthesis class
             // and printing "balanced" if it returns true
             // else printing "not balanced"
-            if (new Solution().isParenthesisBalanced(st) == true)
+            if (new Solution().isBalanced(st) == true)
                 System.out.println("true");
             else
                 System.out.println("false");
@@ -31,25 +31,21 @@ class Driverclass {
 
 
 class Solution {
-    // Function to check if brackets are balanced or not.
-    static boolean isParenthesisBalanced(String s) {
+    static boolean isBalanced(String s) {
         // code here
-        Vector<Character> stack=new Vector<>();
-        Map<Character, Character> brackets=Map.of(
-            ')','(',
-            '}','{',
-            ']','[');
+        Vector<Character> st=new Vector<>();
+        Map<Character, Character> brackets=Map.of(')','(','}','{',']','[');
         for(char i:s.toCharArray()){
             if(brackets.containsKey(i)){
-                char t = stack.isEmpty() ? '#' : stack.remove(stack.size() - 1);
-                if(t!=brackets.get(i)){
+               char top = st.isEmpty() ? '#' : st.remove(st.size() - 1);
+                if(top!=brackets.get(i)){
                     return false;
                 }
             }
             else{
-                stack.add(i);
+                st.add(i);
             }
         }
-        return stack.isEmpty();
+    return st.isEmpty();
     }
 }
