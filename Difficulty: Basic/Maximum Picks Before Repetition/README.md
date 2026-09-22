@@ -1,0 +1,6 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/matching-pair5320/1">Maximum Picks Before Repetition</a></h2><h3>Difficulty Level : Difficulty: Basic</h3><hr><div class="problems_problem_content__Xm_eO" style="--text-color: var(--problem-text-color);"><p><span style="font-size: 18px;">Given a set of numbers from 1 to n, each number is exactly present twice, so there are n pairs. In the worst-case scenario, how many numbers should be picked and removed from the set until we find a repeating element (or an element picked again)?</span></p><p><span style="font-size: 18px;"><strong>Examples:</strong></span></p><pre><span style="font-size: 18px;"><strong>Input: </strong>n = 3
+<strong>Output: </strong>4
+<strong>Explanation:</strong> There are 3 pairs, In the worst case, an arrangement like {1, 2, 3, 1, 2, 3} would require 4 picks.</span></pre><pre><span style="font-size: 18px;"><strong>Input: </strong>n = 1
+<strong>Output: </strong>2
+<strong>Explanation: </strong>There is one pair and a repeating element would appear in 2 picks.
+</span></pre></div><br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Mathematics</code>&nbsp;
